@@ -1,11 +1,5 @@
 package lab1_05102025;
 
-/*
-*4. Proszę napisać program, który po uruchomieniu będzie pytać się o login i hasło użytkownika,
-* a następnie pokazywać wiadomość czy próba logowania się udała. Jako bazę użytkowników można wykorzystać Mapę a do wczytywania danych klasę Scanner.
-a) Proszę zmodyfikować program tak by zamiast klasy Scanner wykorzystywał klasę Console.
-*/
-
 import java.util.*;
 import java.io.Console;
 

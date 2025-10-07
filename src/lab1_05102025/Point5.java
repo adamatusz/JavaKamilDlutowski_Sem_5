@@ -1,4 +1,5 @@
-package lab1_05102025;//5. Proszę napisać program, który wczytuje z pliku macierz N x N i sprawdza, czy jest ona kwadratem magicznym.
+package lab1_05102025;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -41,7 +42,6 @@ public class Point5 {
 
     /*
       Wczytuje macierz z pliku
-      Format pliku: liczby oddzielone spacjami, wiersze w osobnych liniach
      */
     public static int[][] readMatrixFromFile(String filename) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(filename));

@@ -5,21 +5,15 @@ import java.util.Scanner;
 public class Lab1_05102025 {
 
 
-//1. Proszę napisać, skompilować i uruchomić za pomocą linii poleceń swój pierwszy program Witaj Świecie, który będzie na ekranie wyświetlał ten właśnie napis.
 
     public static void main(String[] args) {
- //Proszę zmodyfikować program tak by zamiast Witaj Świecie program wyświetlał Witaj ${twojeImie} gdzie ${twojeImie} podawane jest jako argument wiersza poleceń.
+
         if (args.length > 0) {
             String twojeImie = args[0];
             System.out.println("Witaj " + twojeImie + "!");
         } else {
             System.out.println("Hello World!!");
         }
-
-//        2. Proszę napisać program, który na wejściu przyjmować będzie liczbę stopni Celsjusza, a na wyjściu zwróci liczbę stopni Fahrenheita.
-//a) Proszę zmodyfikować program tak, aby można było wybierać pomiędzy konwersją Celsjusz -> Fahrenheit a Fahrenheit -> Celsjusz.
-//        b) Proszę dodać do tego stopnie w skali Kelvina i możliwość wyboru skali początkowej i docelowej.
-//c) Proszę zmodyfikować program tak, aby wyniki podawany był z dokładnością do dwóch miejsc po przecinku.
 
      Scanner scanner = new Scanner(System.in);
 
@@ -37,8 +31,6 @@ public class Lab1_05102025 {
         System.out.printf("Wynik: %.2f %s\n", result, to);
         scanner.close();
 
-        //        3. Proszę napisać program, który jako argument będzie przyjmować datę w formacie "YYYY-MM-DD" a na wyjściu wyświetlać nazwę miesiąca
-        //        oraz liczbę dni w miesiącu. Proszę skorzystać z instrukcji warunkowych.
 
         // Krok 3: Obsługa daty z argumentu po imieniu
         if (args.length < 2) {
@@ -72,8 +64,6 @@ public class Lab1_05102025 {
         };
     }
 
-// b) Jeżeli podczas tworzenia kodu nie zostały uwzględnione lata przestępne, to proszę zmodyfikować program tak, aby były uwzględniane.
-// Metoda do przetwarzania daty i wyświetlania wyników
 public static void processDate(String inputDate) {
     String[] parts = inputDate.split("-");
     if (parts.length != 3) {
@@ -150,7 +140,6 @@ public static void processDate(String inputDate) {
 
         System.out.printf("Miesiąc: %s, Liczba dni: %d\n", monthName, days);
     }
-    // Proszę zmodyfikować program tak, aby robił to samo, ale z wykorzystaniem wyrażenia switch.
     // 3b - switch expression
     static void printMonthAndDaysSwitch(int year, int month) {
         String monthName;
@@ -281,65 +270,6 @@ public static void processDate(String inputDate) {
 
     static boolean isLeapYear(int year) {
         return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
-    }
-
-    //   4. Proszę napisać program, który po uruchomieniu będzie pytać się o login i hasło użytkownika,
-    //   a następnie pokazywać wiadomość czy próba logowania się udała. Jako bazę użytkowników można
-    //   wykorzystać Mapę a do wczytywania danych klasę Scanner.
-    //   a) Proszę zmodyfikować program tak by zamiast klasy Scanner wykorzystywał klasę Console.
-
-    //4. Program do logowania użytkownika
-    public static void loginWithScanner() {
-        // Baza użytkowników (login -> hasło)
-        java.util.Map<String, String> users = new java.util.HashMap<>();
-        users.put("admin", "admin123");
-        users.put("user", "pass123");
-        users.put("jan", "kowalski");
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("\n=== System logowania (Scanner) ===");
-        System.out.print("Login: ");
-        String login = scanner.nextLine();
-
-        System.out.print("Hasło: ");
-        String password = scanner.nextLine();
-
-        if (users.containsKey(login) && users.get(login).equals(password)) {
-            System.out.println("✓ Logowanie zakończone sukcesem! Witaj " + login + "!");
-        } else {
-            System.out.println("✗ Logowanie nieudane. Nieprawidłowy login lub hasło.");
-        }
-    }
-
-    //4a. Program do logowania użytkownika z wykorzystaniem klasy Console
-    public static void loginWithConsole() {
-        // Baza użytkowników (login -> hasło)
-        java.util.Map<String, String> users = new java.util.HashMap<>();
-        users.put("admin", "admin123");
-        users.put("user", "pass123");
-        users.put("jan", "kowalski");
-
-        java.io.Console console = System.console();
-
-        if (console == null) {
-            System.out.println("Konsola nie jest dostępna. Uruchom program z terminala.");
-            return;
-        }
-
-        System.out.println("\n=== System logowania (Console) ===");
-        String login = console.readLine("Login: ");
-        char[] passwordArray = console.readPassword("Hasło: ");
-        String password = new String(passwordArray);
-
-        if (users.containsKey(login) && users.get(login).equals(password)) {
-            System.out.println("✓ Logowanie zakończone sukcesem! Witaj " + login + "!");
-        } else {
-            System.out.println("✗ Logowanie nieudane. Nieprawidłowy login lub hasło.");
-        }
-
-        // Wyczyść hasło z pamięci ze względów bezpieczeństwa
-        java.util.Arrays.fill(passwordArray, ' ');
     }
 }
 
