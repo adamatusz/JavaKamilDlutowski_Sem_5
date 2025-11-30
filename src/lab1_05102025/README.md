@@ -2,7 +2,7 @@
 
 Instrukcje
 1. Proszę napisać, skompilować i uruchomić za pomocą linii poleceń swój pierwszy program Witaj Świecie, który będzie na ekranie wyświetlał ten właśnie napis.
-   Proszę zmodyfikować program tak by zamiast Witaj Świecie program wyświetlał Witaj ${twojeImie} gdzie ${twojeImie} podawane jest jako argument wiersza poleceń.
+   * Proszę zmodyfikować program tak by zamiast Witaj Świecie program wyświetlał Witaj ${twojeImie} gdzie ${twojeImie} podawane jest jako argument wiersza poleceń.
 
 2. Proszę napisać program, który na wejściu przyjmować będzie liczbę stopni Celsjusza, a na wyjściu zwróci liczbę stopni Fahrenheita.
    * Proszę zmodyfikować program tak, aby można było wybierać pomiędzy konwersją Celsjusz -> Fahrenheit a Fahrenheit -> Celsjusz.
