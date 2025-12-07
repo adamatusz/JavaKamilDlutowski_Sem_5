@@ -1,4 +1,4 @@
-package lab1_05102025;
+package Lab1_05102025;
 
 import java.util.Scanner;
 
