@@ -2,7 +2,7 @@ package Lab3_07122025;
 
 import java.util.*;
 
-public class PlanetyUkladuSlonecznego {
+public class PlanetsSolarSystem {
     public static void main(String[] args) {
         // Planety wg. kolejności odległości od Słońca
         String[] planety = {
